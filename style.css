@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#juego{
+    width: 500px;
+    height: 200px;
+    border: 1px solid #000;
+}
+#caracter{
+    width: 20px;
+    height: 50px;
+    background-color: red;
+    position: relative;
+    top: 150px;
+}
+#bloque{
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    position: relative;
+    top:130px;
+    left:480px;
+    animation: bloquesin 1s infinite;
+}
+@keyframes bloquesin{
+    0%{left:480px}
+    50%{left:300px}
+    100%{left:0px}
+}
