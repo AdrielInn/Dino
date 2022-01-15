@@ -7,13 +7,24 @@
     height: 200px;
     border: 1px solid #000;
 }
-#caracter{
+#dino{
     width: 20px;
     height: 50px;
     background-color: red;
     position: relative;
     top: 150px;
 }
+.animar{
+    animation: saltar 500ms;
+}
+
+@keyframes saltar{
+    0%{top:150px}
+    30%{top:100px}
+    70%{top:100px}
+    100%{top:150px}
+}
+
 #bloque{
     width: 20px;
     height: 20px;
@@ -21,10 +32,9 @@
     position: relative;
     top:130px;
     left:480px;
-    animation: bloquesin 1s infinite;
+    animation: bloquesin 1s infinite linear;
 }
 @keyframes bloquesin{
     0%{left:480px}
-    50%{left:300px}
-    100%{left:0px}
+    100%{left:-40px}
 }
