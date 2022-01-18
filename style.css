@@ -3,7 +3,6 @@
     margin: 0;
 }
 #juego{
-    width: 500px;
     height: 200px;
     border: 1px solid #000;
 }
@@ -20,7 +19,7 @@
 
 @keyframes saltar{
     0%{top:150px}
-    30%{top:100px}
+    10%{top:100px}
     70%{top:100px}
     100%{top:150px}
 }
@@ -30,11 +29,12 @@
     height: 20px;
     background-color: blue;
     position: relative;
+
     top:130px;
-    left:480px;
-    animation: bloquesin 1s infinite linear;
+    left:1500px;
+    animation: bloquesin 5s infinite linear;
 }
 @keyframes bloquesin{
-    0%{left:480px}
+    0%{left: 1400px}
     100%{left:-40px}
 }
