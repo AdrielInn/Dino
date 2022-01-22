@@ -1,40 +1,48 @@
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
-#juego{
-    height: 200px;
-    border: 1px solid #000;
+body{
+    height:100vh;
+    background: blue;
+    display: flex;
+    align-items: center;
 }
-#dino{
-    width: 20px;
-    height: 50px;
-    background-color: red;
-    position: relative;
-    top: 150px;
-}
-.animar{
-    animation: saltar 500ms;
-}
-
-@keyframes saltar{
-    0%{top:150px}
-    10%{top:100px}
-    70%{top:100px}
-    100%{top:150px}
-}
-
-#bloque{
-    width: 20px;
-    height: 20px;
-    background-color: blue;
+.contenedor {
+    width: 100%;
+    height: 280px;
+    margin: 0 auto;
+    
     position: relative;
 
-    top:130px;
-    left:1500px;
-    animation: bloquesin 5s infinite linear;
+    background: linear-gradient(#8cff80, #FFE2D1);
 }
-@keyframes bloquesin{
-    0%{left: 1400px}
-    100%{left:-40px}
+
+.dino{
+    width: 84px;
+    height: 84px;
+    
+    position: absolute;
+    bottom: 22px;
+    left: 42px;
+    z-index: 2;
+
+    background: url(/img/dino.png) repeat-x 0px 0px;
+    background-size: 336px 84px;
+    background-position-x: 0px;
+}
+.dino-corriendo{
+    animation: animarDino 0.25s steps(2) infinite;
+}
+.dino-estrellado{
+    background-position-x: -252px;
+}
+
+@keyframes animarDino{
+    from{
+        background-position-x: -84px;
+    }
+    to{
+        background-position-x: -252px;
+    }
 }
